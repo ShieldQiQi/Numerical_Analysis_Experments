@@ -14,7 +14,7 @@
 % define the algorithm for which be used to solve the nolinear equation
 % where the variable can be 0、1、2、3、4 , each one corresponds to the algorithm above
 
-algorithm_index = 3;
+algorithm_index = 4;
 
 %%
 % 方法一：二分法
@@ -228,7 +228,7 @@ if norm(H_initial*F_i,inf) > delta
     z = answer(3);
     F_i_1 = eval(F);
     Y = F_i_1 - F_i;
-    H_initial = H_initial + (R-H_initial*Y)*((R-H_initial*Y)')/((R-H_initial*Y)'*Y);
+    H_initial = H_initial + (R-H_initial*Y)*(R'*H_initial)/(R'*H_initial*Y);
     if count < N
         [answer,count] = quasi_newton(answer,H_initial,count,delta,F,N);
     else
