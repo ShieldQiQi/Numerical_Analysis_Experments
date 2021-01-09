@@ -3,7 +3,7 @@
 % 哈工大数值分析2020年秋研究生，上机实验
 % 第二部分 | 线性方程组求解/高斯列主元消去法
 % 时间: 2020/10/22
-% 学生: 20S008082 齐晓放
+% 学生: 20S****** ***
 % ----------------------------------------------------------
 % 1、【高斯消去法】
 % 2、【高斯列主元消去法】
@@ -20,9 +20,9 @@ d = [10 3 7];
 %%
 % 分别用高斯列主元消去法和高斯消去法求解方程组
 [answer] = gauss_elimination(A,b);
-fprintf("高斯法 方程一 answer = [ %f %f %f ]\n",answer(1),answer(2),answer(3));
+fprintf("高斯法 方程一 answer = [ %10f %f %f ]\n",answer(1),answer(2),answer(3));
 [answer] = gauss_principal_element_elimination(A,b);
-fprintf("高斯列主元法 方程一 answer = [ %f %f %f ]\n",answer(1),answer(2),answer(3));
+fprintf("高斯列主元法 方程一 answer = [ %10f %f %f ]\n",answer(1),answer(2),answer(3));
 [answer] = gauss_elimination(C,d);
 fprintf("高斯法 方程二 answer = [ %f %f %f ]\n",answer(1),answer(2),answer(3));
 [answer] = gauss_principal_element_elimination(C,d);
